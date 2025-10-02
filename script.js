@@ -1,8 +1,8 @@
-// Pasta das imagens
+// Pasta das imagens (correção de maiúscula)
 const imageFolder = 'Imagens/';
 
 // Lista das imagens
-const images = ['1.jpeg','2.jpeg','3.jpeg','4.jpeg']; // coloque o nome das imagens da pasta
+const images = ['1.jpeg','2.jpeg','3.jpeg','4.jpeg']; 
 
 const slidesContainer = document.getElementById('slides');
 
@@ -31,24 +31,24 @@ function createHeart() {
   heart.classList.add('heart');
   heart.textContent = '💖';
 
-  // posição horizontal aleatória
   heart.style.left = Math.random() * window.innerWidth + 'px';
-  // tamanho aleatório
   heart.style.fontSize = (20 + Math.random() * 30) + 'px';
-  // duração da animação aleatória
   heart.style.animationDuration = (2 + Math.random() * 3) + 's';
-  // cor aleatória
   const colors = ['#ff69b4', '#ff1493', '#ffb6c1', '#ffc0cb'];
   heart.style.color = colors[Math.floor(Math.random() * colors.length)];
 
   container.appendChild(heart);
 
-  // remove o coração após a animação
   heart.addEventListener('animationend', () => {
     heart.remove();
   });
 }
 
-// criar vários corações continuamente sem travar
-setInterval(createHeart, 200); // 1 coração a cada 0.2s
+// criar vários corações continuamente
+setInterval(createHeart, 200);
 
+document.body.addEventListener("click", () => {
+  const music = document.getElementById("music");
+  music.muted = false;
+  music.play();
+});
