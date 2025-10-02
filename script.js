@@ -1,5 +1,5 @@
 // Pasta das imagens
-const imageFolder = 'imagens/';
+const imageFolder = 'Imagens/';
 
 // Lista das imagens
 const images = ['1.jpeg','2.jpeg','3.jpeg','4.jpeg']; // coloque o nome das imagens da pasta
